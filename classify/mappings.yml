@@ -1,0 +1,50 @@
+womens:
+  tops:
+    - tops
+    - shirts
+    - blouses
+  dresses:
+    - dresses
+  jumpers:
+    - jumpers
+    - sweaters
+    - cardigans
+  jackets:
+    - coats
+    - jackets
+  trousers:
+    - trousers
+    - jeans
+  shorts:
+    - shorts
+  skirts:
+    - skirts
+  nightwear:
+    - lingerie
+  shoes:
+    - shoes
+    - heels
+    - flats
+    - sandals
+    - sports
+    - casual
+    - wide fit
+  accessories:
+    - accessories
+    - bags
+    - purses
+    - jewellery
+    - sunglasses
+
+mens:
+  tops:
+    - tops
+    - shirts
+  jackets:
+    - jackets
+    - outerwear
+    - blazers
+  accessories:
+    - accessories
+  shoes:
+    - shoes
