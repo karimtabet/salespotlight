@@ -1,0 +1,18 @@
+{
+   "_id": "_design/products",
+   "language": "javascript",
+   "fulltext": {
+       "by_filters": {
+           "index": "
+                function(doc) {
+                    if (doc['rrp'] <= doc['sale_price']) return null;
+                    var ret=new Document();
+                    ret.add(doc.title, {field:'title'}); 
+                    ret.add(doc.rrp, {field:'rrp', type:'float'});
+                    ret.add(doc.sale_price, {field:'sale_price', type:'float'});
+                    return ret
+                }
+            "
+       }
+   }
+}
