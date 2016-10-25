@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import threading, time
 import yaml
 import json
@@ -7,7 +8,7 @@ from kafka import KafkaProducer
 
 class Producer(threading.Thread):
     '''
-    Threaded Kafka Producer with additional parameter 
+    Threaded Kafka Producer with additional parameter
     for message to produce
     '''
     def __init__(self, message, *args, **kwargs):
@@ -19,6 +20,7 @@ class Producer(threading.Thread):
     def run(self):
         producer = KafkaProducer(bootstrap_servers='localhost:9092')
         producer.send('products', self.message)
+
 
 def produce(message):
     '''
