@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="logo">
+        <h1>SALE</h1>
+        <h2>spotlight</h2>
+    </div>
+    <div class="search">
+        <form id="search_form">
+            <img src="img/magnifying-glass.svg"/>
+            <input type="text" id="search_field" placeholder="Search">
+        </form>
+        <div class="dropdown">
+        <button onclick="show_dropdown()" class="dropbtn">Sort<img src="img/arrow-down.svg"/></button>
+          <div id="sort_dropdown" class="dropdown_content">
+                <form id="sort_form">
+                   <input id="sort_latest" type="radio" name="field" value="sort_latest">
+                  <label for="sort_latest"><span><span></span></span>Latest</label>
+                  <input id="sort_cheapest" type="radio" name="field" value="sale_price<float>">
+                  <label for="sort_cheapest"><span><span></span></span>Cheapest</label>
+                  <input id="sort_discount" type="radio" name="field" value="sort_discount">
+                  <label for="sort_discount"><span><span></span></span>Biggest Discount</label>
+                </form>
+          </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="columns" data-columns>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/salvattore.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
