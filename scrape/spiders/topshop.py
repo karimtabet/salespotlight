@@ -92,7 +92,12 @@ def scrape():
         product_urls = get_product_urls(product_list_page)
         for product_url in product_urls:
             product_page = requests.get(product_url).text
-            product_data = get_product_data(product_page)
+            try:
+                product_data = get_product_data(product_page)
+            except KeyError as error:
+                LOG.info('Skipping product: %s \n Exception: %s',
+                         product_urls, error)
+                return
             product_data['url'] = product_url
             product_data['categories'].append(category)
             products_response.append(product_data)
