@@ -23,7 +23,7 @@ function append(product_fields) {
 function getProducts(offset) {
     var sort = $('#sort_form input[type=radio]:checked').val()
     var url = "http://127.0.0.1:5984/salespotlight/_fti/_design/foo/by_title?q=title:" + localStorage.getItem(search_field) +
-              "&sort=" + sort +
+              // "&sort=" + sort +
               "&limit=30&include_docs=true&force_json=true"
     $.ajax({
         type : "GET",
