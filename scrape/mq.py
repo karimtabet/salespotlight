@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-import threading, time
-import yaml
-import json
+import threading
+import time
 
 from kafka import KafkaProducer
 
@@ -20,6 +19,7 @@ class Producer(threading.Thread):
     def run(self):
         producer = KafkaProducer(bootstrap_servers='localhost:9092')
         producer.send('products', self.message)
+        time.sleep(1)
 
 
 def produce(message):
